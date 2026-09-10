@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Inti</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="importmap">
+     {  
+        "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.185.1/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.185.1/examples/jsm/"
+        }
+     }
+    </script>
+
+</head>
+
+<body class="flex flex-col h-screen  w-screen bg-slate-600">
+    <header class="flex items-center justify-center bg-black">
+        <h1 class="text-yellow-500 text-2xl font-bold font-serif text-center">Proyecto Inti</h1>
+        <span>
+            <img src="https://i.ibb.co/99ZyvD7j/img-proyecto-inti-logo.png" alt="" class="w-24">
+        </span>
+    </header>
+    <main
+        class="flex flex-col md:flex-row items-center md:items-start justify-center gap-8 bg-slate-600 p-6 flex-1 overflow-auto">
+        <div>
+            <section class="flex flex-col gap-4 items-center">
+                <input type="text" name="" id="flr-calendar" placeholder="Selecciona una fecha" class="hidden">
+                <div class="w-full flex flex-col gap-1">
+                    <label for="flr-select" class="text-sm font-semibold text-gray-50">Llamaradas detectadas:</label>
+                    <select name="" id="flr-select"
+                        class="w-full p-2.5 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm"></select>
+                </div>
+            </section>
+            <section class="w-full max-w-md mt-2">
+                <div id="flare-info"></div>
+            </section>
+        </div>
+        <div>
+            <section>
+                <div id="flare-3d-container"></div>
+            </section>
+        </div>
+    </main>
+    <footer class="text-center py-3 bg-gray-200 text-xs text-gray-600">Proyecto Inti usa datos de la API DONKI de la
+        NASA</footer>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
