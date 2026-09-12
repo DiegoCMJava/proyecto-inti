@@ -428,3 +428,52 @@ function createTextSprite(message, parameters = {}) {
     sprite.scale.set(4, 2, 1);
     return sprite;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const modalButtons = document.querySelectorAll('[data-modal-toggle]');
+    const modals = document.querySelectorAll("[id^='modal-']");
+
+    modalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetId = button.getAttribute('data-modal-target');
+            const modal = document.getElementById(targetId);
+            const content = modal.querySelector("div");
+
+            if (modal.classList.contains("hidden")) {
+                modal.classList.remove("hidden");
+                setTimeout(() => {
+                    modal.classList.add("opacity-100");
+                    content.classList.remove("scale-95", "opacity-0");
+                    content.classList.add("scale-100", "opacity-100");
+                }, 10);
+            } else {
+                // Ocultar con animación
+                modal.classList.remove("opacity-100");
+                content.classList.remove("scale-100", "opacity-100");
+                content.classList.add("scale-95", "opacity-0");
+
+                setTimeout(() => {
+                    modal.classList.add("hidden");
+                }, 100); // coincide con duration-300
+            }
+        });
+
+    });
+
+
+    modals.forEach(modal => {
+        modal.addEventListener("click", (e) => {
+            const content = modal.querySelector("div");
+            if (!content.contains(e.target)) {
+                modal.classList.remove("opacity-100");
+                content.classList.remove("scale-100", "opacity-100");
+                content.classList.add("scale-95", "opacity-0");
+
+                setTimeout(() => {
+                    modal.classList.add("hidden");
+                }, 300);
+            }
+        });
+    });
+
+});
