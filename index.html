@@ -28,6 +28,24 @@
     </header>
     <main
         class="flex flex-col md:flex-row items-center md:items-start justify-center gap-8 bg-slate-600 p-6 flex-1 overflow-auto">
+        <button data-modal-target="modal-help" data-modal-toggle="modal-help" type="button"
+            class="w-12 h-12 rounded-full bg-orange-500 font-bold text-gray-50 hover:bg-orange-400 cursor-pointer flex items-center justify-center shadow-lg focus:outline-none focus:ring-2 focus:ring-yellow-300"
+            title="Ayuda">?</button>
+        <div id="modal-help" tabindex="-1"
+            class="hidden fixed inset-0 z-50 flex justify-center items-center bg-black/75 shadow-sm  duration-300">
+            <div
+                class="relative p-4 w-full max-w-2xl max-h-full bg-black shadow-lg transform transition-transform duration-300 scale-95 opacity-0">
+                <h2 class="text-xl font-bold mb-4">Cómo usar esta web</h2>
+                <p class="text-gray-50">1. Selecciona una fecha en el calendario.</p>
+                <p class="text-gray-50">2. Selecciona una llamarada de la lista.</p>
+                <p class="text-gray-50">3. Revisa la información sobre la llamarada en la tarjeta.</p>
+                <p class="text-gray-50">4. Observa el modelo 3D del sol con la llamarada.(algunas visualizaciones pueden
+                    no estar disponibles)</p>
+                <button data-modal-target="modal-help" data-modal-toggle="modal-help" type="button"
+                    class="w-10 h-10 text-white bg-orange-400 rounded rounded-lg hover:bg-orange-400 cursor-pointer m-4"
+                    title="Cerrar">X</button>
+            </div>
+        </div>
         <div>
             <section class="flex flex-col gap-4 items-center">
                 <input type="text" name="" id="flr-calendar" placeholder="Selecciona una fecha" class="hidden">
