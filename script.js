@@ -130,6 +130,7 @@ function createFlareCard(ev) {
                 <p><strong>Pico máximo:</strong> ${ev.peakTime ? ev.peakTime.replace("Z", " UTC") : "No disponible"}</p>
                 <p><strong>Fin:</strong> ${ev.endTime ? ev.endTime.replace("Z", " UTC") : "En curso / No disponible"}</p>
                 <p><strong>Región activa:</strong> ${ev.activeRegionNum ? `#${ev.activeRegionNum}` : "Sin registrar"}</p>
+                <p><strong>Instrumentos:</strong> ${ev.instruments?.map(inst => inst.displayName).join(", ") || "Sin registrar"}</p>
             </div>
         </div>
     `;
