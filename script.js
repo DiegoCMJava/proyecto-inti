@@ -275,12 +275,24 @@ function initSolarFlareScene(locationStr, classType, containerId) {
     controls.dampingFactor = 0.5;
 
     const sunGeometry = new THREE.SphereGeometry(4, 32, 32);
-    const sunMesh = new THREE.Mesh(sunGeometry, new THREE.MeshPhongMaterial({
+    const sunTexture = new THREE.TextureLoader().load('./assets/sun.jpeg');
+    const sunMaterial = new THREE.MeshBasicMaterial({ map: sunTexture });
+
+    const textureLoader = new THREE.TextureLoader();
+    const glowTexture = textureLoader.load('./assets/halo.png'); 
+    const spriteMaterial = new THREE.SpriteMaterial({
+        map: glowTexture,
         color: 0xffaa00,
-        emissive: 0xff4500,
-        emissiveIntensity: 0.5,
-        shininess: 100
-    }));
+        transparent: true,
+        opacity: 0.6
+    });
+
+    const glowSprite = new THREE.Sprite(spriteMaterial);
+    glowSprite.scale.set(12, 12, 1);
+
+
+    const sunMesh = new THREE.Mesh(sunGeometry, sunMaterial);
+    sunMesh.add(glowSprite);
     scene.add(sunMesh);
 
     const ambientLight = new THREE.AmbientLight(0x404040);
@@ -359,7 +371,7 @@ function initSolarFlareScene(locationStr, classType, containerId) {
     function animate() {
         requestAnimationFrame(animate);
 
-        sunMesh.rotation.y += 0.002;
+        sunMesh.rotation.y += 0.0008;
 
         controls.update();
         renderer.render(scene, camera);
