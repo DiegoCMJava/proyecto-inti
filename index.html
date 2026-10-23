@@ -54,8 +54,13 @@
 </div>
     <main
         class="flex-1 max-w-[1920px] w-full mx-auto p-3 sm:p-5 lg:p-6 flex flex-col lg:flex-row gap-5 items-stretch min-h-0">
-        <div>
-            <section class="flex flex-col gap-4 items-center">
+        <aside class="w-full lg:w-[410px] xl:w-[440px] flex-shrink-0 flex flex-col gap-4.5 z-20 overflow-y-auto">
+            <section class="bg-[#090c12]/80 backdrop-blur-md border border-amber-500/50 rounded-2xl p-4 sm:p-5 shadow-[0 8px 32px 0 rgba(0, 0, 0, 0.5)] relative overflow-hidden group">
+                <div class="flex items-center justify-between pb-3.5 mb-3 border-b border-slate-800/80">
+                    <div class="flex items-center gap-2">
+                        <h2 class="text-xs font-[monospace] uppercase tracking-widest text-slate-300 font-bold">Selección Cronológica</h2>
+                    </div>
+                </div>
                 <input type="text" name="" id="flr-calendar" placeholder="Selecciona una fecha" class="hidden">
                 <div class="w-full flex flex-col gap-1">
                     <label for="flr-select" class="text-sm font-semibold text-gray-50">Llamaradas detectadas:</label>
@@ -66,7 +71,7 @@
             <section class="w-full max-w-md mt-2">
                 <div id="flare-info"></div>
             </section>
-        </div>
+        </aside>
         <div>
             <section>
                 <div id="flare-3d-container"></div>
