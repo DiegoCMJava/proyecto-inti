@@ -1,0 +1,49 @@
+{
+  "name": "proyecto-inti",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Visualización 3D interactiva de llamaradas solares con datos de la NASA DONKI y React",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiegoCMJava/proyecto-inti.git"
+  },
+  "keywords": [
+    "react",
+    "threejs",
+    "nasa",
+    "space-weather",
+    "solar-flares",
+    "vite",
+    "typescript"
+  ],
+  "author": "DiegoCMJava",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DiegoCMJava/proyecto-inti/issues"
+  },
+  "homepage": "https://github.com/DiegoCMJava/proyecto-inti#readme",
+  "dependencies": {
+    "flatpickr": "^4.6.13",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/flatpickr": "^3.0.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.187.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "tailwindcss": "^4.3.3",
+    "typescript": "5.9",
+    "vite": "^8.3.5",
+    "vite-tsconfig-paths": "^6.1.1"
+  }
+}
