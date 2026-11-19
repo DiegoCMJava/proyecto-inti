@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@import "flatpickr/dist/flatpickr.css";
+
+.flatpickr-calendar {
+    background-color: #ccc2bc !important;
+    border: 1px solid rgba(245, 158, 11, 0.4) !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.7) !important;
+    color: #f8fafc !important;
+}
+
+.flatpickr-day.solar-flare-day {
+    background-color: #ea580c !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    border-radius: 9999px !important;
+}
