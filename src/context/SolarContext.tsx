@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer, useCallback, useRef, type ReactNode} from "react";
+import  { createContext, useContext, useReducer, useCallback, useRef, type ReactNode} from "react";
 import type { SolarFlareEvent } from "@/types/solar";
 import { fetchSolarFlares, getMonthDateRange } from "@/services/nasa.service";
 import { loadRangeCache, saveRangeCache } from "@/services/db.service";
